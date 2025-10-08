@@ -1,7 +1,8 @@
 const puppeteer = require('puppeteer');
 const admin = require('firebase-admin');
 const cron = require('node-cron');
-const serviceAccount = require('./authsignkey.json');
+const serviceAccount = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON);
+
 
 // ===========================
 // 🔹 Initialize Firebase
