@@ -9,7 +9,8 @@ const serviceAccount = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS_JSO
 // ===========================
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://livetvapp-reactjs-default-rtdb.firebaseio.com/'
+  databaseURL: process.env.FIREBASE_DB_URL
+
 });
 
 // ===========================
